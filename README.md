@@ -16,6 +16,32 @@ This is my personal prompt engineering reference inspired by the [Prompt Enginee
 The goal is to turn this into a regular practice: crafting reusable prompt templates for real-world tasks in research, writing, analysis, and more.
 
 ---
+# 🔧 Prompt Engineering Patterns: My Working Notebook
+
+*My personal reference guide with tested prompts and examples*
+
+---
+
+## 📚 Table of Contents
+
+* [Overview](#-overview)
+* [1. Game Play Pattern](#-1-game-play-pattern)
+* [2. Template Pattern](#-2-template-pattern)
+* [3. Meta Language Pattern](#-3-meta-language-pattern)
+* [4. Recipe Pattern](#-4-recipe-pattern)
+* [5. Alternative Approaches Pattern](#-5-alternative-approaches-pattern)
+* [6. Question Refinement Pattern](#-6-question-refinement-pattern)
+* [7. Cognitive Verifier Pattern](#-7-cognitive-verifier-pattern)
+* [8. Few-Shot Learning Pattern](#-8-few-shot-learning-pattern)
+* [9. Few-Shot + Sub-Steps Pattern](#-9-few-shot--sub-steps-pattern)
+* [10. Prompt-Based Application Pattern](#-10-prompt-based-application-pattern)
+* [11. Role-Switch Pattern](#-11-role-switch-pattern)
+* [12. Constraint-Based Pattern](#-12-constraint-based-pattern)
+* [13. Self-Explanation Pattern](#-13-self-explanation-pattern)
+* [14. Translation Across Domains Pattern](#-14-translation-across-domains-pattern)
+* [15. Error Spotting Pattern](#-15-error-spotting-pattern)
+
+##
 
 ## 🎮 1. Game Play Pattern
 
