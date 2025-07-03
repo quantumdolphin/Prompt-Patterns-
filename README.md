@@ -16,11 +16,6 @@ This is my personal prompt engineering reference inspired by the [Prompt Enginee
 The goal is to turn this into a regular practice: crafting reusable prompt templates for real-world tasks in research, writing, analysis, and more.
 
 ---
-# 🔧 Prompt Engineering Patterns: My Working Notebook
-
-*My personal reference guide with tested prompts and examples*
-
----
 
 ## 📚 Table of Contents
 
