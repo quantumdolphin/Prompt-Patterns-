@@ -161,89 +161,130 @@ A variation of few-shot prompting that includes intermediate reasoning steps to 
 > Step 4: Compare binding modes with and without water.
 
 ---
-🧠 10. Prompt-Based Application Pattern
+# 🔧 Prompt Engineering Patterns: My Working Notebook
 
-🔹 What it is:
+*My personal reference guide with tested prompts and examples*
+
+---
+
+## 🧠 Overview
+
+This is my personal prompt engineering reference inspired by the [Prompt Engineering for ChatGPT](https://www.coursera.org/learn/prompt-engineering) course. It documents prompt patterns I've studied and applied — along with my own custom examples and use cases. Each section contains:
+
+* A **prompting pattern**
+* A **brief explanation**
+* A **custom prompt I wrote**
+* A **sample output** from ChatGPT
+
+The goal is to turn this into a regular practice: crafting reusable prompt templates for real-world tasks in research, writing, analysis, and more.
+
+
+## 🧠 10. **Prompt-Based Application Pattern**
+
+### 🔹 What it is
+
 Builds an interactive tool using a single well-designed prompt to streamline a daily task or workflow.
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-You are a research assistant AI that helps organize kinase mutation datasets. The user will provide a gene name and mutation position. You must:
+> You are a research assistant AI that helps organize kinase mutation datasets. The user will provide a gene name and mutation position. You must:
+>
+> 1. Search a provided CSV for functional annotations.
+> 2. Report nearby functionally annotated residues within 3 Å.
+> 3. If not found, respond with: "No matching mutation found in dataset."
 
-Search a provided CSV for functional annotations.
+### 💬 Sample Output
 
-Report nearby functionally annotated residues within 3 Å.
+> Query: KIT, D816V
+> Primary result: D816V is classified as Gain-of-Function.
+> Nearby annotated mutations (within 3 Å): T670I (Gain-of-Function), V654A (Likely Gain-of-Function)
 
-If not found, respond with: "No matching mutation found in dataset."
+---
 
-💬 Sample Output:
+## 🧠 11. **Role-Switch Pattern**
 
-Query: KIT, D816VPrimary result: D816V is classified as Gain-of-Function.Nearby annotated mutations (within 3 Å): T670I (Gain-of-Function), V654A (Likely Gain-of-Function)
+### 🔹 What it is
 
-🧠 11. Role-Switch Pattern
-
-🔹 What it is:
 Changes the model’s viewpoint or role, letting it simulate how different perspectives would approach the same task.
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-Rewrite this paragraph on molecular docking as if you're a medicinal chemist explaining it to a project manager with no science background.
+> Rewrite this paragraph on molecular docking as if you're a medicinal chemist explaining it to a project manager with no science background.
 
-💬 Sample Output:
+### 💬 Sample Output
 
-Original: "Ligand conformations were docked into the active site using a scoring function optimized for polar interactions."
-Chemist → PM: "We tested how different shapes of the drug could fit into the protein pocket, using a tool that predicts the best fit based on how well they can interact."
+> Original: "Ligand conformations were docked into the active site using a scoring function optimized for polar interactions."
+> Chemist → PM: "We tested how different shapes of the drug could fit into the protein pocket, using a tool that predicts the best fit based on how well they can interact."
 
-🧠 12. Constraint-Based Pattern
+---
 
-🔹 What it is:
+## 🧠 12. **Constraint-Based Pattern**
+
+### 🔹 What it is
+
 Prompts the model to perform a task within defined constraints like word count, format, or required terminology.
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-Write a LinkedIn headline describing me as a computational chemist in fewer than 120 characters. Include “drug design” and “molecular modeling.”
+> Write a LinkedIn headline describing me as a computational chemist in fewer than 120 characters. Include “drug design” and “molecular modeling.”
 
-💬 Sample Output:
+### 💬 Sample Output
 
-“Computational chemist | Drug design & molecular modeling expert | Bridging data with structure”
+> “Computational chemist | Drug design & molecular modeling expert | Bridging data with structure”
 
-🧠 13. Self-Explanation Pattern
+---
 
-🔹 What it is:
+## 🧠 13. **Self-Explanation Pattern**
+
+### 🔹 What it is
+
 Instructs the model to explain its reasoning process step-by-step as it completes a task. Promotes transparency and traceability.
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-Predict whether the T670V mutation in KIT is likely to cause resistance to avapritinib. Explain your reasoning in 3 steps.
+> Predict whether the T670V mutation in KIT is likely to cause resistance to avapritinib. Explain your reasoning in 3 steps.
 
-💬 Sample Output:
+### 💬 Sample Output
 
-Step 1: T670 is the gatekeeper residue, controlling access to the back pocket.Step 2: Mutation to valine introduces bulk and hydrophobicity, reducing ligand access.Step 3: This change likely weakens avapritinib binding, causing resistance.
+> Step 1: T670 is the gatekeeper residue, controlling access to the back pocket.
+> Step 2: Mutation to valine introduces bulk and hydrophobicity, reducing ligand access.
+> Step 3: This change likely weakens avapritinib binding, causing resistance.
 
-🧠 14. Translation Across Domains Pattern
+---
 
-🔹 What it is:
+## 🧠 14. **Translation Across Domains Pattern**
+
+### 🔹 What it is
+
 Rephrases specialized domain language for a different audience (e.g., from scientific to business).
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-Translate this sentence from a scientific paper into language for a venture capitalist:“This compound shows selective inhibition of mutant KIT D816V over wild-type KIT, with an IC50 difference of 15 nM.”
+> Translate this sentence from a scientific paper into language for a venture capitalist:
+> “This compound shows selective inhibition of mutant KIT D816V over wild-type KIT, with an IC50 difference of 15 nM.”
 
-💬 Sample Output:
+### 💬 Sample Output
 
-“This drug is highly selective — it targets the cancer-causing mutant form of KIT while sparing the normal one, which could reduce side effects.”
+> “This drug is highly selective — it targets the cancer-causing mutant form of KIT while sparing the normal one, which could reduce side effects.”
 
-🧠 15. Error Spotting Pattern
+---
 
-🔹 What it is:
+## 🧠 15. **Error Spotting Pattern**
+
+### 🔹 What it is
+
 Provides a flawed or noisy input and asks the model to detect, explain, or fix the issue.
 
-📝 Prompt:
+### 📝 Custom Prompt
 
-The following docking summary has an error. Identify and correct it:“The ligand was docked to the DNA backbone of the protein using Glide.”
+> The following docking summary has an error. Identify and correct it:
+> “The ligand was docked to the DNA backbone of the protein using Glide.”
 
-💬 Sample Output:
+### 💬 Sample Output
 
-❌ Error: DNA is not part of a protein. This sentence conflates DNA and protein components.✅ Correction: “The ligand was docked to the protein active site using Glide.”
+> ❌ Error: DNA is not part of a protein. This sentence conflates DNA and protein components.
+> ✅ Correction: “The ligand was docked to the protein active site using Glide.”
+
+
 
 
