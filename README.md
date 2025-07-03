@@ -160,25 +160,6 @@ A variation of few-shot prompting that includes intermediate reasoning steps to 
 > Step 3: Evaluate their energetic contribution via MM-GBSA or MD analysis.
 > Step 4: Compare binding modes with and without water.
 
----
-# 🔧 Prompt Engineering Patterns: My Working Notebook
-
-*My personal reference guide with tested prompts and examples*
-
----
-
-## 🧠 Overview
-
-This is my personal prompt engineering reference inspired by the [Prompt Engineering for ChatGPT](https://www.coursera.org/learn/prompt-engineering) course. It documents prompt patterns I've studied and applied — along with my own custom examples and use cases. Each section contains:
-
-* A **prompting pattern**
-* A **brief explanation**
-* A **custom prompt I wrote**
-* A **sample output** from ChatGPT
-
-The goal is to turn this into a regular practice: crafting reusable prompt templates for real-world tasks in research, writing, analysis, and more.
-
-
 ## 🧠 10. **Prompt-Based Application Pattern**
 
 ### 🔹 What it is
